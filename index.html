@@ -12,12 +12,12 @@ html{color-scheme:light !important;background:#F2F2F0;}
 }
 
 /* ===== 방문자 카운터 ===== */
-#visitCounter{position:absolute;left:12px;top:58px;display:flex;align-items:center;gap:6px;background:var(--g100);border:1px solid var(--g200);border-radius:999px;padding:6px 12px;font-size:12px;color:var(--g700);z-index:5;}
+#visitCounter{position:absolute;left:12px;top:58px;display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:6px 12px;font-size:12px;color:#fff;z-index:5;}
 #visitCounter b{font-weight:700;font-size:12px;}
 /* ===== 만족도 조사 ===== */
 #surveyApp{display:none;padding:16px 16px 90px;max-width:520px;margin:0 auto;}
 #surveyApp .sv-hdr{text-align:center;margin-bottom:16px;}
-#surveyApp .sv-hdr h1{font-size:23px;color:var(--navy);margin:8px 0 4px;font-weight:800;letter-spacing:-.3px;}
+#surveyApp .sv-hdr h1{font-size:23px;color:#fff;margin:8px 0 4px;font-weight:800;letter-spacing:-.3px;}
 #surveyApp .sv-hdr p{font-size:13px;color:var(--g500);margin:0;}
 .sv-q{background:#fff;border:1px solid var(--g200);border-radius:12px;padding:14px 15px;margin-bottom:12px;}
 .sv-q .sv-qt{font-size:14px;font-weight:700;color:var(--g700);margin-bottom:10px;}
@@ -40,15 +40,17 @@ html{color-scheme:light !important;background:#F2F2F0;}
 :root{--green:#1D9E75;--gl:#E1F5EE;--gd:#085041;--amber:#BA7517;--al:#FAEEDA;--red:#A32D2D;--rl:#FCEBEB;--navy:#1a3a5c;--nl:#e8f0f8;--g50:#FAFAF8;--g100:#F5F4F0;--g200:#E8E6E0;--g400:#B4B2A9;--g500:#888780;--g700:#444441;--g900:#2C2C2A;--w:#fff;--r:12px;--rs:8px}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 body{font-family:'Noto Sans KR',sans-serif;background:#F2F2F0;color:var(--g900);min-height:100vh;font-size:15px;line-height:1.6;touch-action:pan-y}
-.hdr{background:#fff;color:var(--navy);padding:56px 16px 18px;text-align:center;position:relative;border-bottom:1px solid var(--g200)}
-.hdr-brand{display:flex;flex-direction:column;align-items:center;gap:3px;margin-bottom:12px}
-.hdr-logo{height:30px;width:auto;display:block}
-.hdr-org{font-size:13px;font-weight:700;color:var(--gd);letter-spacing:-.2px}
-.hdr-badge{display:inline-flex;align-items:center;gap:6px;background:var(--gl);color:var(--gd);border-radius:999px;padding:5px 14px;font-size:12px;font-weight:700;letter-spacing:.3px;margin-bottom:10px}
+.hdr{background:var(--gd);color:#fff;padding:56px 16px 18px;text-align:center;position:relative}
+.hdr-brand{display:flex;flex-direction:column;align-items:center;gap:4px;margin-bottom:12px}
+.hdr-brand-row{display:flex;align-items:center;gap:9px}
+.hdr-symbol{height:30px;width:auto;display:block}
+.hdr-corp{font-size:20px;font-weight:800;color:#fff;letter-spacing:-.5px}
+.hdr-org{font-size:13px;font-weight:700;color:rgba(255,255,255,.9);letter-spacing:-.2px}
+.hdr-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);color:#fff;border-radius:999px;padding:5px 14px;font-size:12px;font-weight:700;letter-spacing:.3px;margin-bottom:10px}
 .hdr h1{font-size:21px;font-weight:700;margin-bottom:3px}
-.hdr p{font-size:13px;color:var(--g500);opacity:1}
-.prog-wrap{margin-top:14px;background:var(--g200);border-radius:999px;height:4px;overflow:hidden}
-.prog-fill{height:100%;background:var(--green);border-radius:999px;transition:width .4s ease;width:0%}
+.hdr p{font-size:13px;color:#fff;opacity:.8}
+.prog-wrap{margin-top:14px;background:rgba(255,255,255,.25);border-radius:999px;height:4px;overflow:hidden}
+.prog-fill{height:100%;background:#9FE1CB;border-radius:999px;transition:width .4s ease;width:0%}
 .step{display:none;padding:20px;animation:fi .3s ease}
 .step.active{display:block}
 @keyframes fi{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
@@ -182,7 +184,7 @@ textarea.form-input{resize:none;line-height:1.6}
 /* ===== RA(위험성평가) 스타일 ===== */
 #raApp{display:none;padding:16px 16px 90px;max-width:520px;margin:0 auto;}
 #raApp .ra-hdr{text-align:center;margin-bottom:16px;}
-#raApp .ra-hdr h1{font-size:23px;color:var(--navy);margin:8px 0 4px;font-weight:800;letter-spacing:-.3px;}
+#raApp .ra-hdr h1{font-size:23px;color:#fff;margin:8px 0 4px;font-weight:800;letter-spacing:-.3px;}
 #raApp .ra-hdr p{font-size:13px;color:var(--g500);margin:0;}
 .ra-badge{display:inline-block;background:var(--nl);color:var(--navy);font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;}
 .ra-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:10px;}
@@ -228,7 +230,7 @@ body{padding-bottom:24px;}
 /* ===== 제도소개(INFO) 스타일 ===== */
 #infoApp{display:none;padding:16px 16px 90px;max-width:520px;margin:0 auto;}
 #infoApp .info-hdr{text-align:center;margin-bottom:16px;}
-#infoApp .info-hdr h1{font-size:23px;color:var(--navy);margin:8px 0 4px;font-weight:800;letter-spacing:-.3px;}
+#infoApp .info-hdr h1{font-size:23px;color:#fff;margin:8px 0 4px;font-weight:800;letter-spacing:-.3px;}
 #infoApp .info-hdr p{font-size:13px;color:var(--g500);margin:0;}
 .info-card{background:#fff;border:1px solid var(--g200);border-radius:14px;overflow:hidden;margin-bottom:16px;box-shadow:0 1px 6px rgba(0,0,0,.04);}
 .info-card .ic-cap{padding:12px 14px;border-bottom:1px solid var(--g100);}
@@ -247,7 +249,7 @@ body{padding-bottom:24px;}
 
 /* ===== 처음으로 버튼 ===== */
 .hdr{position:relative;}
-#homeBtn{position:absolute;top:14px;left:12px;display:inline-flex;align-items:center;gap:4px;background:var(--gd);color:#fff;border:none;border-radius:999px;padding:8px 14px;font-size:13px;font-weight:700;font-family:inherit;cursor:pointer;z-index:5;min-height:36px;}
+#homeBtn{position:absolute;top:14px;left:12px;display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,.2);color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:700;font-family:inherit;cursor:pointer;z-index:5;min-height:36px;}
 #homeBtn:active{background:rgba(255,255,255,.35);}
 
 /* ===== 작업유형 위험도 색상 구분 (추가) ===== */
@@ -312,7 +314,10 @@ body{padding-bottom:24px;}
     <button id="homeBtn" onclick="goHome()">🏠 처음으로</button>
     <div id="visitCounter" title="누적 방문자 수">👥 총방문자수 <b id="visitTotal">-</b></div>
     <div class="hdr-brand">
-      <img src="images/keco_logo.png" alt="한국환경공단" class="hdr-logo">
+      <div class="hdr-brand-row">
+        <img src="images/keco_symbol.png" alt="" class="hdr-symbol">
+        <span class="hdr-corp">한국환경공단</span>
+      </div>
       <div class="hdr-org">부산울산경남환경본부</div>
     </div>
     <div class="hdr-badge">⚠ ONE-PASS 안전체크</div>
