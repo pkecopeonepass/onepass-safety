@@ -12,17 +12,17 @@ html{color-scheme:light !important;background:#F2F2F0;}
 }
 
 /* ===== 방문자 카운터 ===== */
-#visitCounter{position:absolute;left:12px;top:52px;display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.32);border-radius:999px;padding:4px 11px;font-size:11px;color:#fff;z-index:5;}
+#visitCounter{position:absolute;left:12px;top:58px;display:flex;align-items:center;gap:6px;background:var(--g100);border:1px solid var(--g200);border-radius:999px;padding:6px 12px;font-size:12px;color:var(--g700);z-index:5;}
 #visitCounter b{font-weight:700;font-size:12px;}
 /* ===== 만족도 조사 ===== */
 #surveyApp{display:none;padding:16px 16px 90px;max-width:520px;margin:0 auto;}
 #surveyApp .sv-hdr{text-align:center;margin-bottom:16px;}
-#surveyApp .sv-hdr h1{font-size:20px;color:var(--navy);margin:6px 0 4px;}
+#surveyApp .sv-hdr h1{font-size:23px;color:var(--navy);margin:8px 0 4px;font-weight:800;letter-spacing:-.3px;}
 #surveyApp .sv-hdr p{font-size:13px;color:var(--g500);margin:0;}
 .sv-q{background:#fff;border:1px solid var(--g200);border-radius:12px;padding:14px 15px;margin-bottom:12px;}
 .sv-q .sv-qt{font-size:14px;font-weight:700;color:var(--g700);margin-bottom:10px;}
 .sv-scale{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;}
-.sv-scale button{padding:10px 2px;border:1px solid var(--g200);border-radius:8px;background:transparent;font-family:inherit;font-size:12px;color:var(--g500);cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;transition:.12s;}
+.sv-scale button{padding:11px 8px;border:1px solid var(--g200);border-radius:8px;background:transparent;font-family:inherit;font-size:13px;color:var(--g500);cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;transition:.12s;min-height:44px;}
 .sv-scale button .sv-em{font-size:17px;}
 .sv-scale button.sel{background:var(--navy);border-color:var(--navy);color:#fff;font-weight:700;}
 .sv-input{width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid var(--g200);border-radius:8px;font-size:14px;font-family:inherit;}
@@ -40,12 +40,15 @@ html{color-scheme:light !important;background:#F2F2F0;}
 :root{--green:#1D9E75;--gl:#E1F5EE;--gd:#085041;--amber:#BA7517;--al:#FAEEDA;--red:#A32D2D;--rl:#FCEBEB;--navy:#1a3a5c;--nl:#e8f0f8;--g50:#FAFAF8;--g100:#F5F4F0;--g200:#E8E6E0;--g400:#B4B2A9;--g500:#888780;--g700:#444441;--g900:#2C2C2A;--w:#fff;--r:12px;--rs:8px}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 body{font-family:'Noto Sans KR',sans-serif;background:#F2F2F0;color:var(--g900);min-height:100vh;font-size:15px;line-height:1.6;touch-action:pan-y}
-.hdr{background:var(--gd);color:#fff;padding:20px 20px 16px;text-align:center}
-.hdr-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.12);border-radius:999px;padding:4px 14px;font-size:12px;font-weight:700;letter-spacing:.5px;margin-bottom:10px}
+.hdr{background:#fff;color:var(--navy);padding:56px 16px 18px;text-align:center;position:relative;border-bottom:1px solid var(--g200)}
+.hdr-brand{display:flex;flex-direction:column;align-items:center;gap:3px;margin-bottom:12px}
+.hdr-logo{height:30px;width:auto;display:block}
+.hdr-org{font-size:13px;font-weight:700;color:var(--gd);letter-spacing:-.2px}
+.hdr-badge{display:inline-flex;align-items:center;gap:6px;background:var(--gl);color:var(--gd);border-radius:999px;padding:5px 14px;font-size:12px;font-weight:700;letter-spacing:.3px;margin-bottom:10px}
 .hdr h1{font-size:21px;font-weight:700;margin-bottom:3px}
-.hdr p{font-size:13px;opacity:.75}
-.prog-wrap{margin-top:14px;background:rgba(255,255,255,.2);border-radius:999px;height:4px;overflow:hidden}
-.prog-fill{height:100%;background:#9FE1CB;border-radius:999px;transition:width .4s ease;width:0%}
+.hdr p{font-size:13px;color:var(--g500);opacity:1}
+.prog-wrap{margin-top:14px;background:var(--g200);border-radius:999px;height:4px;overflow:hidden}
+.prog-fill{height:100%;background:var(--green);border-radius:999px;transition:width .4s ease;width:0%}
 .step{display:none;padding:20px;animation:fi .3s ease}
 .step.active{display:block}
 @keyframes fi{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
@@ -53,7 +56,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:#F2F2F0;color:var(--g900);
 .sec-title{font-size:20px;font-weight:700;color:var(--g900);margin-bottom:16px;line-height:1.3}
 .card{background:var(--w);border-radius:var(--r);border:1px solid var(--g200);padding:18px;margin-bottom:12px}
 .wt-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
-.wt-btn{background:var(--w);border:1.5px solid var(--g200);border-radius:var(--rs);padding:14px 10px;text-align:center;cursor:pointer;font-size:13px;font-weight:500;color:var(--g700);display:flex;flex-direction:column;align-items:center;gap:6px;transition:all .15s;width:100%}
+.wt-btn{background:var(--w);border:1.5px solid var(--g200);border-radius:var(--rs);padding:18px 10px;text-align:center;cursor:pointer;font-size:15px;font-weight:600;color:var(--g900);display:flex;flex-direction:column;align-items:center;gap:8px;transition:all .15s;width:100%;min-height:88px;justify-content:center}
 .wt-btn .wi{font-size:22px}
 .wt-btn:active{transform:scale(.97)}
 .wt-btn.sel{border-color:var(--green);background:var(--gl);color:var(--gd)}
@@ -179,7 +182,7 @@ textarea.form-input{resize:none;line-height:1.6}
 /* ===== RA(위험성평가) 스타일 ===== */
 #raApp{display:none;padding:16px 16px 90px;max-width:520px;margin:0 auto;}
 #raApp .ra-hdr{text-align:center;margin-bottom:16px;}
-#raApp .ra-hdr h1{font-size:20px;color:var(--navy);margin:6px 0 4px;}
+#raApp .ra-hdr h1{font-size:23px;color:var(--navy);margin:8px 0 4px;font-weight:800;letter-spacing:-.3px;}
 #raApp .ra-hdr p{font-size:13px;color:var(--g500);margin:0;}
 .ra-badge{display:inline-block;background:var(--nl);color:var(--navy);font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;}
 .ra-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:10px;}
@@ -225,7 +228,7 @@ body{padding-bottom:24px;}
 /* ===== 제도소개(INFO) 스타일 ===== */
 #infoApp{display:none;padding:16px 16px 90px;max-width:520px;margin:0 auto;}
 #infoApp .info-hdr{text-align:center;margin-bottom:16px;}
-#infoApp .info-hdr h1{font-size:20px;color:var(--navy);margin:6px 0 4px;}
+#infoApp .info-hdr h1{font-size:23px;color:var(--navy);margin:8px 0 4px;font-weight:800;letter-spacing:-.3px;}
 #infoApp .info-hdr p{font-size:13px;color:var(--g500);margin:0;}
 .info-card{background:#fff;border:1px solid var(--g200);border-radius:14px;overflow:hidden;margin-bottom:16px;box-shadow:0 1px 6px rgba(0,0,0,.04);}
 .info-card .ic-cap{padding:12px 14px;border-bottom:1px solid var(--g100);}
@@ -244,8 +247,31 @@ body{padding-bottom:24px;}
 
 /* ===== 처음으로 버튼 ===== */
 .hdr{position:relative;}
-#homeBtn{position:absolute;top:12px;left:12px;display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,.22);color:#fff;border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:6px 12px;font-size:12px;font-weight:700;font-family:inherit;cursor:pointer;backdrop-filter:blur(2px);z-index:5;}
+#homeBtn{position:absolute;top:14px;left:12px;display:inline-flex;align-items:center;gap:4px;background:var(--gd);color:#fff;border:none;border-radius:999px;padding:8px 14px;font-size:13px;font-weight:700;font-family:inherit;cursor:pointer;z-index:5;min-height:36px;}
 #homeBtn:active{background:rgba(255,255,255,.35);}
+
+/* ===== 작업유형 위험도 색상 구분 (추가) ===== */
+.wt-btn{position:relative;overflow:hidden}
+.wt-btn::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--g400)}
+/* 고위험(빨강): 화기·전기·밀폐공간 */
+.wt-btn[data-id="fire"]::before,
+.wt-btn[data-id="electrical"]::before,
+.wt-btn[data-id="confined"]::before{background:var(--red)}
+.wt-btn[data-id="fire"],
+.wt-btn[data-id="electrical"],
+.wt-btn[data-id="confined"]{border-color:#E8C4C4}
+/* 중위험(주황): 고소·중량물 */
+.wt-btn[data-id="height"]::before,
+.wt-btn[data-id="heavy"]::before{background:var(--amber)}
+.wt-btn[data-id="height"],
+.wt-btn[data-id="heavy"]{border-color:#EAD9B8}
+/* 일반(녹색): 일반위험작업 */
+.wt-btn[data-id="general"]::before{background:var(--green)}
+/* 안내(네이비): 본부 청사 - 위험작업 아님 */
+.wt-btn[data-id="building"]::before{background:var(--navy)}
+.wt-btn:active{transform:scale(.98)}
+.wt-btn:hover{border-color:var(--green);box-shadow:0 2px 8px rgba(0,0,0,.06)}
+
 </style>
 <script id="opdi">
 /* One-Pass 초기데이터 복원 로더 (외부파일 data/init.b64.txt 사용, 최초 1회만) */
@@ -285,6 +311,10 @@ body{padding-bottom:24px;}
 <div class="hdr">
     <button id="homeBtn" onclick="goHome()">🏠 처음으로</button>
     <div id="visitCounter" title="누적 방문자 수">👥 총방문자수 <b id="visitTotal">-</b></div>
+    <div class="hdr-brand">
+      <img src="images/keco_logo.png" alt="한국환경공단" class="hdr-logo">
+      <div class="hdr-org">부산울산경남환경본부</div>
+    </div>
     <div class="hdr-badge">⚠ ONE-PASS 안전체크</div>
     <h1>작업 전 안전정보 확인</h1>
     <p>작업 시작 전 안전정보를 반드시 확인해 주세요</p>
